@@ -1,0 +1,26 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+
+{% block main %}
+
+
+<h1  style="text-align:center; font-family: helvetica bold">TechAssist</h1>
+<h4 style="text-align:center; font-family: helvetica bold">Это готовое решение сервиса с онлайн поддержкой для каког-либо сервиса</h4>
+
+<div style="text-align:center"><button type="button"  class="btn btn-dark">Дополнительные услуги</button></div>
+<h5 class="ta">а тут мы планируем дополнять наш проект, и добавть "Проводить автоматизированный поиск решения проблем в формате викторины,
+задавая наводящие вопросы пользователю", а так же "Возможность создания скриншотов и записи коротких видео с демонстрацией
+проблем"</h5>
+
+<h2 style="text-align:center">Аналитика сайта</h2>
+<h3 class="ta"><em>Визиты на сайте:<h2>{{ count.count_all }}</h2></em></h3>
+<h3 class="ta"><em>Зарегистрированные пользователи:<h2>{{ users }}</h2></em></h3>
+<h3 class="ta"><em>Решено проблем:<h2>{{ probs }}</h2></em></h3>
+{% endblock %}
+

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Регистрация
+{% endblock %}
+
+{% block main %}
+<section class="text-center container">
+    <div class="col-lg-6 col-md-8 mx-auto">
+        <h1>Регистрация</h1>
+        <form class="needs-validation" method="post" enctype="multipart/form-data">
+            <input type="text" name="F" id="F" class="form-control" placeholder="Введите фамилию"
+                   required=""><br>
+            <input type="text" name="I" id="I" class="form-control" placeholder="Введите имя"
+                   required=""><br>
+            <input type="text" name="O" id="O" class="form-control" placeholder="Введите отчество"
+                   required=""><br>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Введите почту"
+                   required=""><br>
+            <input type="password" name="password" id="password" class="form-control" placeholder="Введите пароль"
+                   required=""><br>
+            <input type="password" name="password2" id="password2" class="form-control" placeholder="Подтвердите пароль"
+                   required=""><br>
+            <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" required="">
+            <label class="form-check-label" for="exampleCheck1">ознакомлен с <a href="https://www.consultant.ru/document/cons_doc_LAW_61801/" target="_blank">федеральным законом 152 «О персональных данных»</a></label>
+          </div>
+            <input type="submit" class="btn btn-primary" value="Регистрация">
+        </form>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Профиль
+{% endblock %}
+
+
+
+{% block main %}
+    <br>
+    <div style="display:table">
+        <div style="display:table-cell">
+            <h4>ФИО: <em>{{user.fio}}</em></h4>
+            {% if active_problems|length != 0%}
+            <h4>Активные проблемы:</h4>
+            {% for prob in active_problems %}
+                <h4>{{ prob.theme }} --- {{prob.problem}}</h4>
+            {% endfor %}
+            {% else %}
+            <h4>Нет проблем</h4>
+            {% endif %}
+            <h4>Активная проблема:</h4>
+            {% if current_user.admin == 1 %}
+            {% if user_problems|length != 0 %}
+            <h4>Решеные проблемы:</h4>
+            {% for prob in user_problems %}
+                <h4>{{ prob.theme }} --- {{prob.problem[:21]}}</h4>
+            {% endfor %}
+            {% else %}
+            <h4>Не было проблем</h4>
+            {% endif %}
+            {% endif %}
+            </div>
+    <br>
+        </div>
+
+
+
+{% endblock %}
